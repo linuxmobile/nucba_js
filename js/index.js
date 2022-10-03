@@ -82,3 +82,6 @@ if (pizzas.some(pizzaMenos600)) {
 else {
     console.log(`Ninguna cuesta menos de $600`)
 }
+
+// Nombre de cada pizza con precio
+const pizzasConPrecios = pizzas.forEach((pizza) => console.log(`Tenemos la ${pizza.nombre} a sólo $${pizza.precio}`));
