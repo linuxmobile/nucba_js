@@ -85,3 +85,11 @@ else {
 
 // Nombre de cada pizza con precio
 const pizzasConPrecios = pizzas.forEach((pizza) => console.log(`Tenemos la ${pizza.nombre} a sólo $${pizza.precio}`));
+
+
+// Ingredientes de cada pizza
+
+pizzas.forEach((pizza => {
+    console.log (`${pizza.nombre} viene con:`)
+    pizza.ingredientes.forEach((ingrediente) => console.log(ingrediente))
+}))
