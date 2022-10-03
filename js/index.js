@@ -72,3 +72,13 @@ const pizzas = [
 // Pizzas que sean impares
 const pizzaImpar = pizzas.filter( pizzas => pizzas.id % 2 == 1 )
 pizzaImpar.forEach((pizza) => console.log(`El id de ${pizza.nombre} es impar`));
+
+// Listar pizzas que cuesten menos de $600
+const pizzaMenos600 = (pizza) => pizza.precio <= 600;
+
+if (pizzas.some(pizzaMenos600)) {
+    console.log(`Existen pizzas menos de $600`)
+}
+else {
+    console.log(`Ninguna cuesta menos de $600`)
+}
