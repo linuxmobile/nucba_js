@@ -69,8 +69,21 @@ const pizzas = [
     }
 ]
 
+/* EJERCICIO 2 */
 
+const resultSection = document.getElementById("result__section");
+const form = document.getElementById("form");
+const input = document.querySelector(".form__input");
 
+const searchPizza = (value) => pizzas.find((pizza) => pizza.id === value);
+
+const showEmptyError = () => {
+    resultContainer.innerHTML = `
+      <div class="showerrordiv">
+      <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+      <h2 class="error__text">Hola! Necesitas ingresar un número para poder buscar tu pizza!</h2>
+      </div>`;
+  };
 /* 
 EJERCICIO 1
 
