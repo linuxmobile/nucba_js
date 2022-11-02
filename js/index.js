@@ -78,12 +78,31 @@ const input = document.querySelector(".form__input");
 const searchPizza = (value) => pizzas.find((pizza) => pizza.id === value);
 
 const showEmptyError = () => {
-    resultContainer.innerHTML = `
+    resultSection.innerHTML = `
       <div class="showerrordiv">
       <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
       <h2 class="error__text">Hola! Necesitas ingresar un número para poder buscar tu pizza!</h2>
       </div>`;
-  };
+    };
+
+
+
+const submitSearch = (e) => {
+    e.preventDefault();
+    const searchedValue = input.value;
+    if (!searchedValue) {
+        showEmptyError(searchedValue);
+        return;
+    }
+};
+
+const init = () => {
+form.addEventListener("submit", submitSearch);
+};
+
+init();
+
+
 /* 
 EJERCICIO 1
 
