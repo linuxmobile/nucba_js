@@ -104,10 +104,11 @@ const renderResult = (pizza) => {
       resultSection.innerHTML = `
       <div class="pizza__section">
       <img class="pizza__img" src="${ pizza.image }"/>
-        <h2 class="pizza__title">${pizza.nombre.toUpperCase()}</h2>
-       <h3 class="pizza__price"> Precio: $${pizza.precio} </h3>
-       <p>Busca otro número de pizza para ver si la tenemos.</p>
-       </div>
+      <h2 class="pizza__title">${pizza.nombre.toUpperCase()}</h2>
+      <p class="pizza__description">Ingredientes: ${pizza.ingredientes.join(", ")}.</p>
+      <h3 class="pizza__price"> Precio: $${pizza.precio} </h3>
+      <p>Busca otro número de pizza para ver si la tenemos.</p>
+      </div>
       `
     }
   }
