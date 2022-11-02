@@ -69,6 +69,11 @@ const pizzas = [
     }
 ]
 
+
+
+/* 
+EJERCICIO 1
+
 // Pizzas que sean impares
 const pizzaImpar = pizzas.filter( pizzas => pizzas.id % 2 == 1 )
 pizzaImpar.forEach((pizza) => console.log(`El id de ${pizza.nombre} es impar`));
@@ -92,4 +97,4 @@ const pizzasConPrecios = pizzas.forEach((pizza) => console.log(`Tenemos la ${piz
 pizzas.forEach((pizza => {
     console.log (`${pizza.nombre} viene con:`)
     pizza.ingredientes.forEach((ingrediente) => console.log(ingrediente))
-}))
+})) */
