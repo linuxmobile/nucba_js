@@ -10,6 +10,7 @@ const pizzas = [
             "panceta",
             "huevo"
         ],
+        image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ const pizzas = [
             "muzzarela",
             "tomate"
         ],
+        image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 3,
@@ -32,6 +34,7 @@ const pizzas = [
             "Muzzarela",
             "Aceitunas"
         ],
+        image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 4,
@@ -43,6 +46,7 @@ const pizzas = [
             "Nuez",
             "Aceitunas negras"
         ],
+        image: "https://images.unsplash.com/photo-1618213957768-7789409b9dd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBpenphfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 5,
@@ -53,6 +57,7 @@ const pizzas = [
             "Muzzarela",
             "Jamón"
         ],
+        image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBpenphfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 6,
@@ -66,6 +71,7 @@ const pizzas = [
             "Nuez",
             "Roquefort"
         ],
+        image: "https://images.unsplash.com/photo-1618213837799-25d5552820d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHBpenphfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     }
 ]
 
@@ -97,7 +103,7 @@ const renderResult = (pizza) => {
     } else {
       resultSection.innerHTML = `
       <div class="pizza__section">
-      <img class="pizza__img" src=""/>
+      <img class="pizza__img" src="${ pizza.image }"/>
         <h2 class="pizza__title">${pizza.nombre.toUpperCase()}</h2>
        <h3 class="pizza__price"> Precio: $${pizza.precio} </h3>
        <p>Busca otro número de pizza para ver si la tenemos.</p>
