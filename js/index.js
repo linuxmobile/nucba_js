@@ -86,12 +86,14 @@ const showEmptyError = () => {
     };
 
 
-
+/*  Esto es prácticamente lo que aprendimos en la clase :3
+    Evitando el comportamiendo por default del form!
+    Si el valor a buscar está vacío muestra que no hay nada! */
 const submitSearch = (e) => {
     e.preventDefault();
-    const searchedValue = input.value;
-    if (!searchedValue) {
-        showEmptyError(searchedValue);
+    const searchValue = input.value;
+    if (!searchValue) {
+        showEmptyError(searchValue);
         return;
     }
 };
