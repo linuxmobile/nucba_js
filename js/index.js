@@ -71,38 +71,61 @@ const pizzas = [
 
 /* EJERCICIO 2 */
 
-const resultSection = document.getElementById("result__section");
-const form = document.getElementById("form");
-const input = document.querySelector(".form__input");
+const resultSection = document.getElementById("result__section")
+const form = document.getElementById("form")
+const input = document.querySelector(".form__input")
 
-const searchPizza = (value) => pizzas.find((pizza) => pizza.id === value);
+const searchPizza = (value) => pizzas.find((pizza) => pizza.id === value)
 
 const showEmptyError = () => {
     resultSection.innerHTML = `
       <div class="showerrordiv">
       <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
       <h2 class="error__text">Hola! Necesitas ingresar un número para poder buscar tu pizza!</h2>
-      </div>`;
-    };
+      </div>`
+    }
+
+
+const renderResult = (pizza) => {
+    if (!pizza) {
+      resultSection.innerHTML = `
+      <div class="pizza__section">
+      <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+      <h2 class="error"> ¡No pudimos encontrar tu pizza :(.</h2>
+      <p>¡Probá con otro número!.</p>
+      </div>`
+    } else {
+      resultSection.innerHTML = `
+      <div class="pizza__section">
+      <img class="pizza__img" src=""/>
+        <h2 class="pizza__title">${pizza.nombre.toUpperCase()}</h2>
+       <h3 class="pizza__price"> Precio: $${pizza.precio} </h3>
+       <p>Busca otro número de pizza para ver si la tenemos.</p>
+       </div>
+      `
+    }
+  }
 
 
 /*  Esto es prácticamente lo que aprendimos en la clase :3
     Evitando el comportamiendo por default del form!
     Si el valor a buscar está vacío muestra que no hay nada! */
 const submitSearch = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const searchValue = input.value;
     if (!searchValue) {
         showEmptyError(searchValue);
         return;
     }
-};
+    const searchedPizza = searchPizza(Number(searchValue))
+    renderResult(searchedPizza);
+}
 
 const init = () => {
-form.addEventListener("submit", submitSearch);
-};
+form.addEventListener("submit", submitSearch)
+}
 
-init();
+init()
 
 
 /* 
